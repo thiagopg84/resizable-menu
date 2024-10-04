@@ -1,0 +1,25 @@
+button {
+  outline: none;
+  border: none;
+  background-color: #044eab;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  min-width: max-content;
+  max-width: 10rem;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+
+  &.compact {
+    position: relative;
+  }
+}

@@ -1,0 +1,38 @@
+.menu {
+  width: 12rem;
+  background-color: #dbdbdb;
+  height: 100vh;
+  position: relative;
+  padding: 1rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &:not(.resizing) {
+    transition: width 0.2s;
+  }
+
+  .resize-handle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 100vh;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: background-color .3s;
+    &:hover {
+      background-color: rgb(96, 59, 231);
+      cursor: ew-resize;
+    }
+  }
+
+  &.compact {
+    width: 4.25rem;
+  }
+}

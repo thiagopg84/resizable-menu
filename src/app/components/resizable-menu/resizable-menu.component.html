@@ -1,0 +1,12 @@
+<div class="menu" #menu [ngStyle]="isExpanded ? {'width.px': currentWidth} : {}"
+  [ngClass]="{
+    'compact': !isExpanded,
+    'resizing': isResizing
+  }">
+  <app-button class="button" icon="desktop" title="Item 1" [isExpanded]="isExpanded" (buttonClick)="onClick($event)"/>
+  <app-button class="button" icon="comment" title="Item 2" [isExpanded]="isExpanded" (buttonClick)="onClick($event)"/>
+  <app-button class="button" icon="comment-add" title="Item 3" [isExpanded]="isExpanded" (buttonClick)="onClick($event)"/>
+  <app-button class="button" icon="brightness-low" title="Item 4" [isExpanded]="isExpanded" (buttonClick)="onClick($event)"/>
+  <app-button class="button" [icon]="isExpanded ? 'chevron-left': 'chevron-right'" [title]="isExpanded ? 'Toggle menu' : '+'" [isExpanded]="isExpanded" (buttonClick)="toggleMenu()"/>
+  <div #handle class="resize-handle" (mousedown)="onMouseDown($event)"></div>
+</div>

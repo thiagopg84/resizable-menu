@@ -1,0 +1,10 @@
+<button (click)="onClick()" [ngClass]="{
+  'compact': !isExpanded
+}">
+  <svg>
+    <use [attr.xlink:href]="'../../../assets/svg/sprite.svg#'+ icon"></use>
+  </svg>
+  @if (isExpanded) {
+    <span>{{ title }}</span>
+  }
+</button>
