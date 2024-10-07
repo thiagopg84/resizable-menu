@@ -12,7 +12,7 @@ import { ButtonComponent } from '../button/button.component';
 export class ResizableMenuComponent implements AfterViewInit {
   @ViewChild('menu') menu!: ElementRef<HTMLElement>;
   @ViewChild('handle') handle!: ElementRef<HTMLElement>;
-  readonly minWidth = 60;
+  readonly minWidth = 68;
   readonly minWidthToToggle = 150;
   readonly maxWidth = 350;
   readonly defaultWidth = 192;
